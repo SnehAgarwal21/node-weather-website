@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Weather
+    </title>
+    <link rel="icon" href="/img/weather.png">
+    <!-- below is relative path -->
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+
+    <!-- below is absolute path -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    
+  </head>
+
+  <body>
+    <div class="main-content">
+      {{>header}}
+      <p>Welcome, use this site to get weather</p>
+
+      <form>
+        <input placeholder="Location">
+        <button>Search</button>
+      </form>
+
+      <p id="message-1"></p>
+      <p id="message-2"></p>
+    </div>
+    
+    {{>footer}}
+
+    {{!-- script at bottom so it loads after all html is loaded --}}
+    <script src="/js/app.js"></script>
+  </body>
+</html>
