@@ -20,6 +20,10 @@ const forecast = require("./utils/forecast");
 //call express() to call express function
 const app = express();
 
+//get port from environment variable that heroku provides
+//3000 if the port value is not provided
+const port = process.env.PORT || 3000;
+
 //define path
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -139,6 +143,6 @@ app.get("*", (req, res) => {
 });
 
 //port - 3000
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is up on port 3000");
 });
